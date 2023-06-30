@@ -23,6 +23,7 @@ public class UsuarioEntity {
     @Column(name = "name")
     private String nome;
 
+    @Column
     private String email;
 
     @Column(name = "password")
