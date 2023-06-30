@@ -12,17 +12,17 @@ import java.util.Set;
 @Entity
 @Table(name = "product")
 @NoArgsConstructor
-@EqualsAndHashCode
+@EqualsAndHashCode(of = "id")
 public class ProdutoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "product_name")
+    @Column(name = "product_name",length = 100)
     private String nomeProduto;
 
-    @Column(name = "description")
+    @Column(name = "description",length = 200)
     private String descricao;
 
     @Column(name = "value")

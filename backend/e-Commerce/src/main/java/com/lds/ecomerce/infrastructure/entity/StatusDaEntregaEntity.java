@@ -10,14 +10,14 @@ import lombok.Setter;
 @Entity
 @Table(name = "status_delivery")
 @NoArgsConstructor
-@EqualsAndHashCode
+@EqualsAndHashCode(of = "id")
 public class StatusDaEntregaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(length = 15)
     private String status;
 
 }

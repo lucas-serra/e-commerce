@@ -10,23 +10,23 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Setter
 @Table(name = "user")
 @EqualsAndHashCode(of = "id")
 @NoArgsConstructor
-@Setter
 public class UsuarioEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "name",length = 100)
     private String nome;
 
-    @Column
+    @Column(length = 100)
     private String email;
 
-    @Column(name = "password")
+    @Column(name = "password",length = 100)
     private String senha;
 
     @Column(name = "date_of_creation")

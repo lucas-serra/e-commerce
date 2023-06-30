@@ -8,7 +8,7 @@ import lombok.Setter;
 @Entity
 @Setter
 @NoArgsConstructor
-@EqualsAndHashCode
+@EqualsAndHashCode(of = "id")
 @Table(name = "form_of_payment")
 public class FormaPagamentoEntity {
 
@@ -16,7 +16,7 @@ public class FormaPagamentoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "description")
+    @Column(name = "description",length = 100)
     private String descricao;
 
 }

@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @Table(name = "shopping_cart")
 @NoArgsConstructor
-@EqualsAndHashCode
+@EqualsAndHashCode(of = "id")
 public class CarroDeComprasEntity {
 
     @Id

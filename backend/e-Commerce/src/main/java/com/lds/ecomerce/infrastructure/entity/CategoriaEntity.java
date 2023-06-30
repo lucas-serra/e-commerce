@@ -11,7 +11,7 @@ import java.util.Set;
 @Entity
 @Setter
 @Table(name = "category")
-@EqualsAndHashCode
+@EqualsAndHashCode(of = "id")
 @NoArgsConstructor
 public class CategoriaEntity {
 
@@ -19,7 +19,7 @@ public class CategoriaEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "name",length = 100)
     private String nome;
 
     @ManyToMany(mappedBy = "categorias")

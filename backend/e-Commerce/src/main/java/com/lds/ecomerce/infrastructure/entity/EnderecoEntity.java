@@ -20,16 +20,16 @@ public class EnderecoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "road")
+    @Column(name = "road",length = 255)
     private String rua;
 
     @Column(name = "number")
     private Integer numero;
 
-    @Column(name = "city")
+    @Column(name = "city",length = 100)
     private String cidade;
 
-    @Column(name = "postal_code")
+    @Column(name = "postal_code",length = 11)
     private String cep;
 
     @ManyToMany(mappedBy = "enderecos")
