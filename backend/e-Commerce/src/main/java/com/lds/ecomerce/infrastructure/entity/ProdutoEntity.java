@@ -39,4 +39,8 @@ public class ProdutoEntity {
     )
     private Set<CategoriaEntity> categorias = new HashSet<>();
 
+    @ManyToOne
+    @JoinColumn(name = "cart_id")
+    private CarroDeComprasEntity carrinhoDeCompras;
+
 }

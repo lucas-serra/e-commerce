@@ -20,4 +20,8 @@ public class StatusDaEntregaEntity {
     @Column(length = 15)
     private String status;
 
+    @ManyToOne
+    @JoinColumn(name = "sales_id")
+    private VendaEntity venda;
+
 }

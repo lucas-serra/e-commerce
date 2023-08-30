@@ -5,6 +5,9 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity
 @Setter
@@ -17,8 +20,7 @@ public class CarroDeComprasEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
-    @JoinColumn(name = "product_id")
-    private ProdutoEntity idProdutoEntity;
+    @OneToMany(mappedBy = "carrinhoDeCompras")
+    private List<ProdutoEntity> idProdutoEntity = new ArrayList<>();
 
 }

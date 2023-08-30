@@ -5,6 +5,9 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Setter
 @Table(name = "sales")
@@ -28,9 +31,8 @@ public class VendaEntity {
     @JoinColumn(name = "form_of_payment_id")
     private FormaPagamentoEntity idFormaPagamentoEntity;
 
-    @OneToMany
-    @JoinColumn(name = "status_delivery_id")
-    private StatusDaEntregaEntity idStatusEntregaEntity;
+    @OneToMany(mappedBy = "venda")
+    private List<StatusDaEntregaEntity> idStatusEntregaEntity = new ArrayList<>();
 
     @OneToOne
     @JoinColumn(name = "adress_id")

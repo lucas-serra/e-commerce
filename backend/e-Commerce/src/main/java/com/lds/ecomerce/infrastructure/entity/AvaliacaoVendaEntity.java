@@ -14,6 +14,10 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(of = "id")
 public class AvaliacaoVendaEntity {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @OneToOne
     @JoinColumn(name = "sale_id")
     private VendaEntity idVendaEntity;
