@@ -6,7 +6,9 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Table(name = "adress")
@@ -32,7 +34,7 @@ public class EnderecoEntity {
     @Column(name = "postal_code",length = 11)
     private String cep;
 
-    @ManyToMany(mappedBy = "enderecos")
-    private Set<UsuarioEntity> usuarios = new HashSet<>();
+    @OneToMany(mappedBy = "idEnderecoEntity")
+    private List<VendaEntity> venda = new ArrayList<>();
 
 }

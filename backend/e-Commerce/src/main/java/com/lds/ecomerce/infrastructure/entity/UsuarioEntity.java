@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -35,12 +36,7 @@ public class UsuarioEntity {
     @Column(name = "date_of_atualization")
     private LocalDateTime dataAtualizacao;
 
-    @ManyToMany
-    @JoinTable(
-            name = "adress_user",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "adress_id")
-    )
-    private Set<EnderecoEntity> enderecos = new HashSet<>();
+    @OneToMany(mappedBy = "idUsuarioEntity")
+    private List<VendaEntity> venda;
 
 }

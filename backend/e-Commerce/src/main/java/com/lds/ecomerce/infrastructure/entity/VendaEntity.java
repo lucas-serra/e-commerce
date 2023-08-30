@@ -23,7 +23,7 @@ public class VendaEntity {
     @JoinColumn(name = "shopping_cart_id")
     private CarroDeComprasEntity idCarroDeComprasEntity;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id")
     private UsuarioEntity idUsuarioEntity;
 
@@ -34,7 +34,7 @@ public class VendaEntity {
     @OneToMany(mappedBy = "venda")
     private List<StatusDaEntregaEntity> idStatusEntregaEntity = new ArrayList<>();
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "adress_id")
     private EnderecoEntity idEnderecoEntity;
 
