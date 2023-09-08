@@ -1,15 +1,12 @@
-package com.lds.ecomerce.infrastructure.entity;
+package com.lds.ecomerce.domain.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Table(name = "adress")
 @Entity

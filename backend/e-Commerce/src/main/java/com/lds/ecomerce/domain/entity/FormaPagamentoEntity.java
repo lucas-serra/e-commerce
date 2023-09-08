@@ -1,4 +1,4 @@
-package com.lds.ecomerce.infrastructure.entity;
+package com.lds.ecomerce.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
