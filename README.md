@@ -1,3 +1,4 @@
 # e-commerce
 Modelagem do banco:
-![image](https://github.com/lucas-serra/e-commerce/assets/91974464/38b94853-11ea-4423-bd5c-296bf09b2f51)
+![image](https://github.com/lucas-serra/e-commerce/assets/91974464/3a904272-6a53-4b25-9b99-fe7d321bdb50)
+
